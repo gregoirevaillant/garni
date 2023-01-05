@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.home-container {
+  min-height: 100vh;
+  background: url('./images/IMG1.jpeg');
+  background-size: cover;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 180px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 40px;
+  overflow: hidden;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.nav-links a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+}
+
+.nav-links a:hover {
+  transform: translateY(-100%);
+}
+
+.burger {
+  display: none;
+}
+
+.landing {
+  line-height: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.big-title {
+  width: 40%;
+  color: white;
+  font-size: 80px;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 100;
+}
+
+.link {
+  line-height: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  width: 70px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.scroll-text {
+  color: white;
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.scroll-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+}
+
+.scroll-text:hover {
+  transform: translateY(-100%);
+}
+
+.scroll-icon {
+  font-size: 25px;
+  color: white;
+}
+
+.best-sales-container {
+  min-height: 80vh;
+  background: white;
+  padding: 0 100px;
+}
+
+.section-title {
+  position: relative;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+    .section-title::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    background: #9d2479;
+    bottom: 0;
+    box-shadow: 0 2px 2px #0000001f;
+    }
+
+.best-products {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+    .product1 {
+    background: url('./images/IMG1.jpeg');
+    }
+
+    .product2 {
+    background: url('./images/IMG2.jpeg');
+    }
+
+    .product3 {
+    background: url('./images/IMG3.jpeg');
+    }
+
+    .product4 {
+    background: url('./images/IMG4.jpeg');
+    }
+
+.product-box::before {
+  content: "En savoir plus";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffffdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100%;
+  transition: left 0.4s;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.product-box:hover::before {
+  left: 0;
+}
+
+.product-bio {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background: #ffffffdf;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.product-price {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.products-container {
+  padding: 0 100px;
+  min-height: 150vh;
+  margin-top: 50px;
+}
+
+.grid-products {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 400px);
+}
+
+    .product-grid1 {
+    background: url('./images/nos_products/bag.jpeg');
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    }
+
+    .product-grid2 {
+    background: url('./images/nos_products/Facemask.JPG');
+    grid-column: 3 / 5;
+    }
+
+    .product-grid3 {
+    background: url('./images/nos_products/scrunch.jpg');
+    grid-column: 3 / 5;
+    }
+
+    .product-grid4 {
+    background: url('./images/nos_products/Keyring.jpeg');
+    grid-column: 1;
+    grid-row: 3 / 5;
+    }
+
+.product-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  transition: background 0.4s;
+}
+
+.no-grid {
+  height: 500px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.footer {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: space-between;
+  padding: 0 100px;
+  flex-wrap: wrap;
+}
+
+.copyrights {
+  padding-right: 20px;
+}
+
+.conditions {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
+/* Responsive */
+
+
+
+@media (max-width: 1150px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .delivery-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .delivery-container div {
+    margin: 30px;
+  }
+
+  .grid-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid {
+    flex: 1;
+    min-width: 350px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .logo {
+    width: 100px;
+  }
+
+  .landing,
+  .header,
+  .best-sales-container,
+  .products-container,
+  .footer {
+    padding: 0 7%;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .big-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .product-box {
+    min-width: 300px;
+  }
+
+  .product-name,
+  .product-box::before {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    justify-content: center;
+  }
+}
